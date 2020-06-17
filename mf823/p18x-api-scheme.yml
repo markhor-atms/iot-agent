@@ -1,209 +1,204 @@
-swagger: '2.0'
+openapi: 3.0.0
 info:
   description: |
     This is a sample server Petstore server.  You can find 
     out more about Swagger at 
     [http://swagger.io](http://swagger.io) or on 
     [irc.freenode.net, #swagger](http://swagger.io/irc/).
-  version: 1.0.0
+  version: "1.0.0-oas3"
   title: Swagger Petstore
-  termsOfService: http://swagger.io/terms/
+  termsOfService: 'http://swagger.io/terms/'
   contact:
     email: apiteam@swagger.io
   license:
     name: Apache 2.0
-    url: http://www.apache.org/licenses/LICENSE-2.0.html
-# host: petstore.swagger.io
-# basePath: /v2
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
 tags:
-- name: pet
-  description: Everything about your Pets
-  externalDocs:
-    description: Find out more
-    url: http://swagger.io
-- name: store
-  description: Access to Petstore orders
-- name: user
-  description: Operations about user
-  externalDocs:
-    description: Find out more about our store
-    url: http://swagger.io
-# schemes:
-# - http
+  - name: pet
+    description: Everything about your Pets
+    externalDocs:
+      description: Find out more
+      url: 'http://swagger.io'
+  - name: store
+    description: Access to Petstore orders
+  - name: user
+    description: Operations about user
+    externalDocs:
+      description: Find out more about our store
+      url: 'http://swagger.io'
 paths:
-  /goform/goform_get_cmd_process: 
-    get: 
-      summary: ""
-      description: ""
-      parameters: 
-        - 
-          name: "X-Requested-With"
-          type: "string"
-          in: "header"
-          description: ""
+  /goform/goform_get_cmd_process:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        - name: X-Requested-With
+          in: header
+          description: ''
           required: true
-        - 
-          name: "cmd"
-          type: "string"
-          in: "query"
-          description: ""
+          schema:
+            type: string
+        - name: cmd
+          in: query
+          description: ''
           required: true
-        - 
-          name: "multi_data"
-          type: "string"
-          in: "query"
-          description: ""
+          schema:
+            type: string
+        - name: multi_data
+          in: query
+          description: ''
           required: true
-        - 
-          name: "sms_received_flag_flag"
-          type: "string"
-          in: "query"
-          description: ""
+          schema:
+            type: string
+        - name: sms_received_flag_flag
+          in: query
+          description: ''
           required: true
-        - 
-          name: "sts_received_flag_flag"
-          type: "string"
-          in: "query"
-          description: ""
+          schema:
+            type: string
+        - name: sts_received_flag_flag
+          in: query
+          description: ''
           required: true
-        - 
-          name: "isTest"
-          type: "string"
-          in: "query"
-          description: ""
+          schema:
+            type: string
+        - name: isTest
+          in: query
+          description: ''
           required: true
-        - 
-          name: "_"
-          type: "string"
-          in: "query"
-          description: ""
+          schema:
+            type: string
+        - name: _
+          in: query
+          description: ''
           required: true
-      responses: 
-        200: 
-          description: ""
-          schema: 
-            type: "object"
-            properties: 
-              signalbar: 
-                type: "string"
-                description: ""
-              network_type: 
-                type: "string"
-                description: ""
-              network_provider: 
-                type: "string"
-                description: ""
-              ppp_status: 
-                type: "string"
-                description: ""
-              modem_main_state: 
-                type: "string"
-                description: ""
-              EX_SSID1: 
-                type: "string"
-                description: ""
-              ex_wifi_status: 
-                type: "string"
-                description: ""
-              EX_wifi_profile: 
-                type: "string"
-                description: ""
-              m_ssid_enable: 
-                type: "string"
-                description: ""
-              sms_unread_num: 
-                type: "string"
-                description: ""
-              sms_received_flag: 
-                type: "string"
-                description: ""
-              sts_received_flag: 
-                type: "string"
-                description: ""
-              RadioOff: 
-                type: "string"
-                description: ""
-              simcard_roam: 
-                type: "string"
-                description: ""
-              lan_ipaddr: 
-                type: "string"
-                description: ""
-              station_mac: 
-                type: "string"
-                description: ""
-              battery_charging: 
-                type: "string"
-                description: ""
-              battery_vol_percent: 
-                type: "string"
-                description: ""
-              battery_pers: 
-                type: "string"
-                description: ""
-              pin_status: 
-                type: "string"
-                description: ""
-              loginfo: 
-                type: "string"
-                description: ""
-              total_tx_bytes: 
-                type: "string"
-                description: ""
-              total_rx_bytes: 
-                type: "string"
-                description: ""
-              total_time: 
-                type: "string"
-                description: ""
-              realtime_tx_bytes: 
-                type: "string"
-                description: ""
-              realtime_rx_bytes: 
-                type: "string"
-                description: ""
-              realtime_time: 
-                type: "string"
-                description: ""
-              realtime_tx_thrpt: 
-                type: "string"
-                description: ""
-              realtime_rx_thrpt: 
-                type: "string"
-                description: ""
-              monthly_rx_bytes: 
-                type: "string"
-                description: ""
-              monthly_tx_bytes: 
-                type: "string"
-                description: ""
-              monthly_time: 
-                type: "string"
-                description: ""
-              date_month: 
-                type: "string"
-                description: ""
-              data_volume_limit_switch: 
-                type: "string"
-                description: ""
-              data_volume_limit_size: 
-                type: "string"
-                description: ""
-              data_volume_alert_percent: 
-                type: "string"
-                description: ""
-              data_volume_limit_unit: 
-                type: "string"
-                description: ""
-              roam_setting_option: 
-                type: "string"
-                description: ""
+          schema:
+            type: string
+      responses:
+        '200':
+          description: ''
+          content:
+            '*/*':
+              schema:
+                type: object
+                properties:
+                  signalbar:
+                    type: string
+                    description: ''
+                  network_type:
+                    type: string
+                    description: ''
+                  network_provider:
+                    type: string
+                    description: ''
+                  ppp_status:
+                    type: string
+                    description: ''
+                  modem_main_state:
+                    type: string
+                    description: ''
+                  EX_SSID1:
+                    type: string
+                    description: ''
+                  ex_wifi_status:
+                    type: string
+                    description: ''
+                  EX_wifi_profile:
+                    type: string
+                    description: ''
+                  m_ssid_enable:
+                    type: string
+                    description: ''
+                  sms_unread_num:
+                    type: string
+                    description: ''
+                  sms_received_flag:
+                    type: string
+                    description: ''
+                  sts_received_flag:
+                    type: string
+                    description: ''
+                  RadioOff:
+                    type: string
+                    description: ''
+                  simcard_roam:
+                    type: string
+                    description: ''
+                  lan_ipaddr:
+                    type: string
+                    description: ''
+                  station_mac:
+                    type: string
+                    description: ''
+                  battery_charging:
+                    type: string
+                    description: ''
+                  battery_vol_percent:
+                    type: string
+                    description: ''
+                  battery_pers:
+                    type: string
+                    description: ''
+                  pin_status:
+                    type: string
+                    description: ''
+                  loginfo:
+                    type: string
+                    description: ''
+                  total_tx_bytes:
+                    type: string
+                    description: ''
+                  total_rx_bytes:
+                    type: string
+                    description: ''
+                  total_time:
+                    type: string
+                    description: ''
+                  realtime_tx_bytes:
+                    type: string
+                    description: ''
+                  realtime_rx_bytes:
+                    type: string
+                    description: ''
+                  realtime_time:
+                    type: string
+                    description: ''
+                  realtime_tx_thrpt:
+                    type: string
+                    description: ''
+                  realtime_rx_thrpt:
+                    type: string
+                    description: ''
+                  monthly_rx_bytes:
+                    type: string
+                    description: ''
+                  monthly_tx_bytes:
+                    type: string
+                    description: ''
+                  monthly_time:
+                    type: string
+                    description: ''
+                  date_month:
+                    type: string
+                    description: ''
+                  data_volume_limit_switch:
+                    type: string
+                    description: ''
+                  data_volume_limit_size:
+                    type: string
+                    description: ''
+                  data_volume_alert_percent:
+                    type: string
+                    description: ''
+                  data_volume_limit_unit:
+                    type: string
+                    description: ''
+                  roam_setting_option:
+                    type: string
+                    description: ''
 externalDocs:
   description: Find out more about Swagger
-  url: http://swagger.io
-# Added by API Auto Mocking Plugin
-host: virtserver.swaggerhub.com
-basePath: /ajsb85/Test/1.0.0
-schemes:
- - https
- - http
+  url: 'http://swagger.io'
+servers:
+  - url: 'https://virtserver.swaggerhub.com/ajsb85/Test/1.0.0'
+  - url: 'http://virtserver.swaggerhub.com/ajsb85/Test/1.0.0'
